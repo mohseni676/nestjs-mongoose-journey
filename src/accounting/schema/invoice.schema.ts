@@ -9,8 +9,8 @@ export type InvoiceDocument = HydratedDocument<Invoice>;
 export class Invoice{
     @Prop({type: Date})
     invoice_date: Date
-    @Prop()
-    /*     
+    /*
+    @Prop() 
     customer_name: string
     @Prop()
     customer_phone: string 
