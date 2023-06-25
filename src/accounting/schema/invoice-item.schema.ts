@@ -4,7 +4,14 @@ import { Invoice } from "./invoice.schema";
 
 export type InvoiceItemDocument = HydratedDocument<InvoiceItem>
 
-@Schema()
+@Schema({
+    toJSON:{
+        versionKey: false,
+    },
+    toObject:{
+        versionKey: false,
+    }
+})
 export class InvoiceItem{
     @Prop()
     good_name: string
