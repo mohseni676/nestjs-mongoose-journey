@@ -10,6 +10,7 @@ import { InvoiceItem, InvoiceItemSchema } from './schema/invoice-item.schema';
   imports: [
     MongooseModule.forFeature([
     {name: Invoice.name, schema: InvoiceSchema},
+    
     {name: Customer.name, schema: CustomerSchema},
     {name: InvoiceItem.name, schema: InvoiceItemSchema}
   ])

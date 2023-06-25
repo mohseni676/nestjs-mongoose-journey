@@ -8,8 +8,8 @@ export type CustomerDocument = HydratedDocument<Customer>
 export class Customer{
     @Prop()
     name: string
-    @Prop()
-    phone: number
+    @Prop({unique: true})
+    phone: string
     //Add one to many relation to InvoiceSchema
     @Prop({type:[
         {type : mongoose.Types.ObjectId , ref: 'Invoice'}
